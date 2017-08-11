@@ -51,6 +51,6 @@
     <plugin name="cordova-plugin-statusbar" spec="1.0.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin src="https://github.com/phonegap/phonegap-plugin-barcodescanner"/>   
-    <plugin src="res/cordova-plugin-splashscreen"/>   
+    <plugin src="https://github.com/apache/cordova-plugin-splashscreen"/>   
    
 </widget>
