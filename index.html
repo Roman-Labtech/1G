@@ -35,8 +35,32 @@
   </script>
    <script> document.addEventListener("deviceready", appReady, false); 
              function appReady(){ 
-                document.addEventListener("backbutton", 
-                                                           function(e){ var page=myApp.getCurrentView().activePage; myApp.hidePreloader(); if(page.name=="home"){ e.preventDefault(); if(confirm("Do you want to Exit!")) { navigator.app.clearHistory(); navigator.app.exitApp(); } } else { navigator.app.backHistory() } }, false); } </script>
+               document.addEventListener('backbutton', function (e) {
+e.preventDefault();
+/ Check for open panels /
+if ($$('.panel.active').length > 0) {
+f7.closePanel();
+return;
+}
+/ Check for go back in history /
+var view = f7.getCurrentView();
+if (!view) return;
+if (view.history.length > 1) {
+view.router.back();
+return;
+}
+Quit app /
+navigator.notification.confirm(
+‘Exit Application ?’, // message
+function (n) {
+if (n == 1) navigator.app.exitApp();
+},
+‘Bite To Eat’, // title
+['OK', ‘Cancel’] // button labels
+);
+}, false)
+
+             } </script>
  <script>
           function exitFromApp()
        {
@@ -97,7 +121,27 @@
 			 </div>
          </a>       
    	</li>
-   	
+         <li class="accordion-item">
+       <a href="ventilist.html" data-ignore-cache="true" class="close-panel" > 
+        <div class="item-inner">
+          <div class="item-title mainlinks panel_white">
+				  <i class="material-icons icon-settings">done</i>Вентиля
+          </div>
+        </div>
+        </a>
+    </li>
+      
+    <li class="accordion-item">
+       <a href="dopoln.html" data-ignore-cache="true" class="close-panel" > 
+        <div class="item-inner">
+          <div class="item-title mainlinks panel_white">
+				<i class="material-icons icon-settings">done</i>Дополнительно
+          </div>
+        </div>
+        </a>
+    </li>
+      
+
    	<script>
     var myApp = new Framework7();
     var $$ = Dom7;
@@ -115,32 +159,6 @@
     });
  
   </script>
-   	
-   	<li class="accordion-item">
-        <a href="color-themes.html" data-ignore-cache="true" class="close-panel">
-			<div class="item-inner">
-				<div class="item-title mainlinks panel_white">
-              <i class="material-icons icon-settings">dialpad</i>
-				 Калькулятор ВЗ-246
-				</div>          
-			 </div>
-         </a>       
-   	</li>
-   	
-   
-   	<li class="accordion-item">
-        <a href="№" data-ignore-cache="true" class="close-panel">
-			<div class="item-inner">
-				<div class="item-title mainlinks panel_white">
-                
-				  <div class="item-title" onclick="openBrowser()">
-				    <i class="material-icons icon-settings">alarm</i>
-				  Срок поверки ВЗ-246
-				  </div>
-				</div>          
-			 </div>
-         </a>       
-   	</li>
    	
    
 
