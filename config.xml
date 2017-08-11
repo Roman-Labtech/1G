@@ -44,7 +44,7 @@
         <icon density="xxxhdpi" src="res/icon/android/drawable-xxxhdpi-icon.png" />
     </platform>
     <engine name="android" spec="^6.2.3" />
-    <plugin name="CordovaCallNumberPlugin-master" />
+    <!--<plugin name="CordovaCallNumberPlugin-master" />-->
     <plugin name="cordova-plugin-console" spec="1.0.7" />
     <plugin name="cordova-plugin-dialogs" />
     <plugin name="cordova-plugin-inappbrowser" />
@@ -52,7 +52,9 @@
     <plugin name="cordova-plugin-splashscreen-master" />
     <plugin name="cordova-plugin-statusbar" spec="1.0.1" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="phonegap-plugin-barcodescanner-master" />
+    <!--<plugin name="phonegap-plugin-barcodescanner-master" />-->
     <plugin src="https://github.com/phonegap/phonegap-plugin-barcodescanner" source="git"/>   
+ 
+    <plugin src="https://github.com/Rohfosho/CordovaCallNumberPlugin" source="git"/>  
 
 </widget>
