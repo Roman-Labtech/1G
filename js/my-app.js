@@ -28,10 +28,12 @@ function onDeviceReady() {
     document.getElementById("QRalert").addEventListener("click", dialogAlert);
     console.log(navigator.notification);
 } 
-function onBackKeyDown() { mainView.router.back(); }
+//function onBackKeyDown() { mainView.router.back(); }
 
 
+//
 
+//
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {
