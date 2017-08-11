@@ -50,4 +50,7 @@
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-statusbar" spec="1.0.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+    <plugin src="res/phonegap-plugin-barcodescanner-master"/>   
+    <plugin src="res/cordova-plugin-splashscreen"/>   
+   
 </widget>
