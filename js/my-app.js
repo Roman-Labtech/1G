@@ -318,7 +318,16 @@ function scanner(){
      
  );
 }
-
+function callhome(){
+phonedialer.dial(
+  "2125551212", 
+  function(err) {
+    if (err == "empty") alert("Unknown phone number");
+    else alert("Dialer Error:" + err);    
+  },
+  function(success) { alert('Dialing succeeded'); }
+ );
+}
 
 
 
