@@ -53,4 +53,5 @@
     <plugin src="https://github.com/phonegap/phonegap-plugin-barcodescanner"/>   
     <plugin src="https://github.com/apache/cordova-plugin-splashscreen"/>   
     <plugin name="CordovaCallNumberPlugin" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" />
+    <plugin name="cordova-plugin-phonedialer" spec="https://github.com/peutetre/PhoneGap-PhoneDialer.git"/>
 </widget>
